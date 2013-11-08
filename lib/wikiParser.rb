@@ -6,10 +6,8 @@ require(File.dirname(__FILE__)+'/wikiParserPage.rb')
 # Parses a Wikipedia dump and extracts internal links, content, and page type.
 class WikiParser
 
-
 	# path to the Wikipedia dump.
 	attr_reader :path
-
 
 	# Convert the opened path to a dump to an enumerator of {WikiParser::Page}
 	# @return [Enumerator<Nokogiri::XML::Node>] the enumerator.

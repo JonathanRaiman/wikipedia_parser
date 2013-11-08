@@ -1,0 +1,1 @@
+Dir.glob('rakes/*.rake').each { |r| import r }

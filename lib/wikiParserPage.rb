@@ -53,6 +53,9 @@ class WikiParser
 			end
 		end
 
+		# Extracts internals links from a wikipedia article into an array of `uri`s and `title`s:
+		# @param article [String] the article content to extract links from.
+		# @return [Array<Hash>] the internal links in hash form.
 		def article_to_internal_links article
 			links = []
 			matches = article.scan(/\[\[(?<name>[^\]\|:]+)(?<trigger>\|[^\]]+)?\]\]/)
@@ -70,6 +73,6 @@ class WikiParser
 			links
 		end
 
-		private :process_node, :article_to_internal_links
+		private :process_node
 	end
 end

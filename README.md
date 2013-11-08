@@ -32,6 +32,12 @@ The internal links contain the `title` and the `uri` of the destination page:
 			end
 		end
 	end
+Testing
+-------
+
+Simply run:
+
+	rake test:all
 
 Issues
 ------

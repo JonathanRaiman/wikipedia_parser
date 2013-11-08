@@ -1,0 +1,195 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.8/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.8/ http://www.mediawiki.org/xml/export-0.8.xsd" version="0.8" xml:lang="en">
+	<siteinfo>
+		<sitename>Wikipedia</sitename>
+	</siteinfo>
+	<page>
+		<title>Foobar</title>
+		<ns>0</ns>
+		<id>12</id>
+		<revision>
+			<id>563200406</id>
+			<parentid>563200009</parentid>
+			<timestamp>2013-07-07T05:02:36Z</timestamp>
+			<contributor>
+				<username>Bhny</username>
+				<id>285109</id>
+			</contributor>
+			<comment>Lorem Ipsumed some important points.</comment>
+			<text xml:space="preserve">{{Distinguish|FUBAR}}
+				{{Other uses}}
+				{{Redirect|Foo|FOO (Forward Observation Officer)|Artillery observer}}
+
+				The terms '''foobar''' ({{IPAc-en|ˈ|f|uː|b|ɑr}}), '''fubar''', or '''foo''', '''bar''', '''baz''' and '''qux''' (alternatively, '''quux''') are sometimes used as [[placeholder name]]s (also referred to as [[metasyntactic variable]]s) in [[computer programming]] or computer-related documentation.<ref name="rfc3092" /> They have been used to name entities such as [[Variable (computer science)|variable]]s, [[Function (computer science)|functions]], and [[command (computing)|command]]s whose purpose is unimportant and serve only to demonstrate a concept.  The words themselves have no meaning in this usage.  ''Foobar'' is sometimes used alone; ''foo'', ''bar'', and ''baz'' are sometimes used in that order, when multiple entities are needed.
+
+				The usage in [[computer programming]] examples and [[pseudocode]] varies; in certain circles, it is used extensively, but many prefer descriptive names, while others prefer to use single letters.  [[Eric S. Raymond]] has called it an "important hackerism" alongside [[kludge]] and [[cruft]].<ref name="Raymond">{{cite book|url=http://books.google.com/books?id=g80P_4v4QbIC&amp;lpg=PP1&amp;pg=PA5|title=The New Hacker's Dictionary|author=[[Eric S. Raymond]]|publisher=[[MIT Press]]|year=1996|isbn=0-262-68092-0}}</ref>Okay
+			</text>
+		</revision>
+	</page>
+	<page>
+    	<title>AccessibleComputing</title>
+		<redirect title="Computer accessibility" />
+		<revision>
+			<contributor>
+				<username>OlEnglish</username>
+				<id>7181920</id>
+			</contributor>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Talk:Accessibility</title>
+		<redirect title="Computer accessibility" />
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>User:Accessibility</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Wikipedia:Accessibility</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Computer Software</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>San Francisco</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Parallax</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>IPhone</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Facebook</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Twitter</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+			<sha1>lo15ponaybcg2sf49sstw9gdjmdetnk</sha1>
+			<model>wikitext</model>
+			<format>text/x-wiki</format>
+		</revision>
+	</page>
+	<page>
+    	<title>Bing</title>
+		<revision>
+			<text xml:space="preserve">
+				Bing bingly boo.</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Google</title>
+		<revision>
+			<text xml:space="preserve">
+				Google googly goo.</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Romney (disambiguation)</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+	<page>
+    	<title>User:Jim Carrey</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Harrison Ford</title>
+		<revision>
+			<text xml:space="preserve">
+				Is an actor from the USA.</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Ford (disambiguation)</title>
+		<revision>
+			<text xml:space="preserve">
+				You might be interested by [[Harrison Ford|Mr. ford]]</text>
+		</revision>
+	</page>
+	<page>
+    	<title>McDonald (disambiguation)</title>
+		<revision>
+			<text xml:space="preserve">
+				Have you seen any movies with [[Harrison Ford]]? I [[Harrison Ford|have]].
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+	<page>
+    	<title>China (disambiguation)</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+	<page>
+    	<title>Simple (disambiguation)</title>
+		<revision>
+			<text xml:space="preserve">
+				#REDIRECT [[Computer accessibility]] {{R from CamelCase}}</text>
+		</revision>
+	</page>
+</mediawiki>
