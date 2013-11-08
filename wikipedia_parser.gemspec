@@ -8,9 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'jraiman@mit.edu'
   s.files       = ["lib/wikipedia_parser.rb", "lib/wikiParser.rb", "lib/wikiParserPage.rb", "README.md"]
   s.requirements << "nokogiri"
-  s.requirements << "bzip2"
   s.add_runtime_dependency 'nokogiri'
-  s.add_runtime_dependency 'bzip2'
   s.homepage    = 'http://github.org/JonathanRaiman/wikipedia_parser'
   s.license     = 'MIT'
   s.has_rdoc = 'yard'
