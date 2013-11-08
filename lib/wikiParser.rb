@@ -22,10 +22,12 @@ class WikiParser
 	# Convert the opened path to a dump to an enumerator of {WikiParser::Page}
 	# @return [Enumerator<Nokogiri::XML::Node>] the enumerator.
 	def initialize (opts = {})
-		@file, new_path = nil, File.expand_path("../../#{opts[:path]}", File.dirname(__FILE__))
+		@file, new_path = nil, opts[:path]
 		if File.exists? new_path and !File.directory? new_path
 			@path = new_path
 			parse
+		else
+			raise ArgumentError.new "Cannot open file. Check path please."
 		end
 	end
 
