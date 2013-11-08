@@ -32,3 +32,8 @@ The internal links contain the `title` and the `uri` of the destination page:
 			end
 		end
 	end
+
+Issues
+------
+
+On `Mac` and `Linux` `bzip2` is included, but it appears that on Windows a seperate `bzip2` reader is needed.
