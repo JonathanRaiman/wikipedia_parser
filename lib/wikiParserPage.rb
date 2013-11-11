@@ -7,6 +7,8 @@ class WikiParser
 		Namespaces = %w(WP Help Talk User Template Wikipedia File Book Portal TimedText Module MediaWiki Special Media Category)
 		# Title of the Wikipedia article.
 		attr_reader :title
+		# The Wikipedia id of the article.
+		attr_reader :id
 		attr_reader :internal_links
 		# the content of the Wikipedia article
 		attr_reader :article
@@ -36,6 +38,8 @@ class WikiParser
 		def process_node nd
 			nd.element_children.each_with_index do |node,k|
 				case node.name
+				when 'id'
+					@id    = node.content
 				when 'title'
 					@title = node.content
 					if @title.match(/(#{Namespaces.join("|")}):.+/i) then @special_page = true and @page_type = $1 end
@@ -64,7 +68,7 @@ class WikiParser
 					name_match = match[0].strip.chomp.match(/^(?<name>[^#]+)(?<hashtag>#.+)?/)
 					link_match = match[1] ? match[1].strip.chomp.match(/^\|[\t\n\s\/]*(?<name>[^#]+)(?<hashtag>#.+)?/) : name_match
 					if name_match
-						name_match    = name_match[:name].gsub('_', ' ')
+						name_match = name_match[:name].gsub('_', ' ')
 						link_match = link_match ? link_match[:name] : name_match
 						links << {:uri => name_match, :title => link_match}
 					end
