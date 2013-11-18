@@ -25,18 +25,21 @@ class WikiParser
 		# Create a new article page from an XML node.
 		# @param opts [Hash] the parameters to instantiate a page.
 		# @option opts [Nokogiri::XML::Node] :node the {http://rubydoc.info/gems/nokogiri/frames Nokogiri::XML::Node} containing the article.
+		# @option opts [Fixnum] :from the index from which to resume parsing among the nodes.
+		# @option opts [String] :until A node-name stopping point for the parsing.
 		def initialize (opts={})
 			@title    = @article      = @redirect_title      = ""
 			@redirect = @special_page = @disambiguation_page = false
 			@internal_links, @page_type = [], nil
 			return unless !opts[:node].nil?
-			process_node opts[:node]
+			process_node opts
 			trigs = article_to_internal_links(@article)
 			@internal_links = trigs
 		end
 
-		def process_node nd
-			nd.element_children.each_with_index do |node,k|
+		def process_node(opts={})
+			opts[:node].element_children.each_with_index do |node,k|
+				if opts[:from] and k < opts[:from] then next end
 				case node.name
 				when 'id'
 					@id    = node.content
@@ -54,7 +57,20 @@ class WikiParser
 						end
 					end
 				end
+				if opts[:until] and opts[:until] == node.name
+					@stop_index = k
+					break
+				end
 			end
+		end
+
+		# Extracts internals links from a wikipedia article into an array of `uri`s and `title`s, starting
+		# from the stopping point given to the parser earlier.
+		# @return [WikiParser::Page] the parser.
+		def finish_processing
+			@stop_index||= 0
+			process_node :node => @node, :from => @stop_index
+			self
 		end
 
 		# Extracts internals links from a wikipedia article into an array of `uri`s and `title`s:

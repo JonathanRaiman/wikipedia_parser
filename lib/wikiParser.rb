@@ -18,6 +18,8 @@ class WikiParser
 	end
 
 	# Convert the opened path to a dump to an enumerator of {WikiParser::Page}
+	# @param opts [Hash] the parameters to parse a wikipedia page.
+	# @option opts [String] :path The path to the Wikipedia dump in .xml or .bz2 format.
 	# @return [Enumerator<Nokogiri::XML::Node>] the enumerator.
 	def initialize (opts = {})
 		@file, new_path = nil, opts[:path]
