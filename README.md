@@ -32,6 +32,22 @@ The internal links contain the `title` and the `uri` of the destination page:
 			end
 		end
 	end
+
+For larger pages, such as **Barack Obama** or **United States** reading all the internal links takes a long time. If you are only interested in certain pages, say those that start with the letter **A**, then you could skip those pages you don't want without incuring the cost of reading the entire article since the title is at the top of the xml file. Here's one way of implementing this check:
+
+	loop do
+		page = parser.get_next_page :until => "title" # or "id" or "redirect" (boolean)
+		if !page then break
+		else
+			if page.title ~= /^[aA]/ # starts with A
+				page.finish_processing # reads the remainder of the nodes.
+				page.internal_links.each do |link|
+					puts link[:title] + "points to" + link[:uri]
+				end
+			end
+		end
+	end
+
 Testing
 -------
 
