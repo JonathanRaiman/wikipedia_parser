@@ -58,7 +58,7 @@ class WikiParser
 					end
 				end
 				if opts[:until] and opts[:until] == node.name
-					@stop_index = k
+					@node, @stop_index = opts[:node], k
 					break
 				end
 			end
@@ -70,6 +70,7 @@ class WikiParser
 		def finish_processing
 			@stop_index||= 0
 			process_node :node => @node, :from => @stop_index
+			@node = nil
 			self
 		end
 
