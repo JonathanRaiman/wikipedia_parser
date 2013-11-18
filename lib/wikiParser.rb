@@ -59,7 +59,7 @@ class WikiParser
 				xml = Nokogiri::XML::parse("<page>"+node.inner_xml+"</page>").first_element_child
 				return WikiParser::Page.new({:node => xml}.merge(opts))
 			else
-				get_next_page
+				get_next_page(opts)
 			end
 		rescue StopIteration, NoMethodError
 			nil
