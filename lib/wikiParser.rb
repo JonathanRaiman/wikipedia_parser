@@ -47,14 +47,17 @@ class WikiParser
 		end
 	end
 
-	# Reads the next node in the xml tree and returns it as a {WikiParser::Page} if it exists.
+	# Reads the next node in the xml tree and returns it as a {WikiParser#::Page} if it exists.
 	# @return [WikiParser::Page, NilClass] A page if found.
-	def get_next_page
+	# @param opts [Hash] the parameters to instantiate a page.
+	# @option opts [String] :until A node-name stopping point for the parsing. (Useful for not parsing an entire page until some property is checked.)
+	# @see Page#finish_processing
+	def get_next_page(opts={})
 		begin
 			node = @reader.next
 			if node.name == "page" and node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
 				xml = Nokogiri::XML::parse("<page>"+node.inner_xml+"</page>").first_element_child
-				return WikiParser::Page.new :node => xml
+				return WikiParser::Page.new({:node => xml}.merge(opts))
 			else
 				get_next_page
 			end
