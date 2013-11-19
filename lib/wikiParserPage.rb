@@ -39,7 +39,7 @@ class WikiParser
 
 		def process_node(opts={})
 			opts[:node].element_children.each_with_index do |node,k|
-				if opts[:from] and k < opts[:from] then next end
+				if !opts[:from].nil? and k <= opts[:from] then next end
 				case node.name
 				when 'id'
 					@id    = node.content
@@ -71,6 +71,8 @@ class WikiParser
 			@stop_index||= 0
 			process_node :node => @node, :from => @stop_index
 			@node = nil
+			trigs = article_to_internal_links(@article)
+			@internal_links = trigs
 			self
 		end
 

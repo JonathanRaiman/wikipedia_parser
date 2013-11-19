@@ -2,7 +2,7 @@
 require(File.dirname(__FILE__)+"/../lib/wikipedia_parser.rb")
 
 describe WikiParser do
-	before(:each) do
+	before(:all) do
 		@parse = WikiParser.new :path => File.dirname(__FILE__)+"/test_dump.xml"
 		@pages = []
 	end
