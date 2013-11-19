@@ -25,4 +25,12 @@ describe WikiParser do
 		end
 	end
 
+	it 'should be able to immediately resume parsing' do
+		@parse.close
+		@parse = WikiParser.new :path => File.dirname(__FILE__)+"/test_dump.xml"
+		@page = @parse.get_next_page :until => "title"
+		@page.finish_processing
+		@page.internal_links.should_not be_empty
+	end
+
 end

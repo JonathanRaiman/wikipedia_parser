@@ -21,13 +21,16 @@ class WikiParser
 		# is this page `special`? Is it in the {Namespaces}?
 		attr_reader :special_page
 		attr_reader :disambiguation_page
+		attr_reader :language
 
 		# Create a new article page from an XML node.
 		# @param opts [Hash] the parameters to instantiate a page.
 		# @option opts [Nokogiri::XML::Node] :node the {http://rubydoc.info/gems/nokogiri/frames Nokogiri::XML::Node} containing the article.
 		# @option opts [Fixnum] :from the index from which to resume parsing among the nodes.
 		# @option opts [String] :until A node-name stopping point for the parsing.
+		# @option opts [String] :language The language of the dump this article was read from.
 		def initialize (opts={})
+			@language = opts[:language]
 			@title    = @article      = @redirect_title      = ""
 			@redirect = @special_page = @disambiguation_page = false
 			@internal_links, @page_type = [], nil
@@ -89,7 +92,7 @@ class WikiParser
 					if name_match
 						name_match = name_match[:name].gsub('_', ' ')
 						link_match = link_match ? link_match[:name] : name_match
-						links << {:uri => name_match, :title => link_match}
+						links << {:uri => name_match, :title => {@language.to_sym => link_match}}
 					end
 				end
 			end
