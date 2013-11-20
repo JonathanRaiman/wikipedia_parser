@@ -4,18 +4,18 @@ require(File.dirname(__FILE__)+"/../lib/wikipedia_parser.rb")
 extractable_text = File.open(File.dirname(__FILE__)+"/test_article.txt").read
 
 extracted_triggers = [
-	{:uri => "Formula One",             :title => {en: "Formula One"}},
-	{:uri => "Hungaroring",             :title => {en: "Hungaroring"}},
-	{:uri => "Mogyoród",                :title => {en: "Mogyoród"}},
-	{:uri => "Budapest",                :title => {en: "Budapest"}},
-	{:uri => "Hungary",                 :title => {en: "Hungary"}},
-	{:uri => "2008 Formula One season", :title => {en: "2008 Formula One season"}},
-	{:uri => "Heikki Kovalainen",       :title => {en: "Heikki Kovalainen"}},
-	{:uri => "McLaren",                 :title => {en: "McLaren"}},
-	{:uri => "Timo Glock",              :title => {en: "Timo Glock"}},
-	{:uri => "Toyota F1",               :title => {en: "Toyota"}},
-	{:uri => "Kimi Räikkönen",          :title => {en: "Kimi Räikkönen"}},
-	{:uri => "Scuderia Ferrari",        :title => {en: "Ferrari"}}
+	{:uri => "Formula One",             :title => {"en" => "Formula One"}},
+	{:uri => "Hungaroring",             :title => {"en" => "Hungaroring"}},
+	{:uri => "Mogyoród",                :title => {"en" => "Mogyoród"}},
+	{:uri => "Budapest",                :title => {"en" => "Budapest"}},
+	{:uri => "Hungary",                 :title => {"en" => "Hungary"}},
+	{:uri => "2008 Formula One season", :title => {"en" => "2008 Formula One season"}},
+	{:uri => "Heikki Kovalainen",       :title => {"en" => "Heikki Kovalainen"}},
+	{:uri => "McLaren",                 :title => {"en" => "McLaren"}},
+	{:uri => "Timo Glock",              :title => {"en" => "Timo Glock"}},
+	{:uri => "Toyota F1",               :title => {"en" => "Toyota"}},
+	{:uri => "Kimi Räikkönen",          :title => {"en" => "Kimi Räikkönen"}},
+	{:uri => "Scuderia Ferrari",        :title => {"en" => "Ferrari"}}
 ]
 
 describe WikiParser do

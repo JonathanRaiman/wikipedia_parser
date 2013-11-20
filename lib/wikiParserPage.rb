@@ -92,7 +92,7 @@ class WikiParser
 					if name_match
 						name_match = name_match[:name].gsub('_', ' ')
 						link_match = link_match ? link_match[:name] : name_match
-						links << {:uri => name_match, :title => {@language.to_sym => link_match}}
+						links << {:uri => name_match, :title => {@language => link_match}}
 					end
 				end
 			end

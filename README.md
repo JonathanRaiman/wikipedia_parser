@@ -28,7 +28,7 @@ The internal links contain the `title` and the `uri` of the destination page:
 		if !page              then break
 		else
 			page.internal_links.each do |link|
-				puts link[:title][page.language.to_sym] + "points to" + link[:uri]
+				puts link[:title][page.language] + "points to" + link[:uri]
 			end
 		end
 	end
@@ -42,7 +42,7 @@ For larger pages, such as **Barack Obama** or **United States** reading all the 
 			if page.title ~= /^[aA]/ # starts with A
 				page.finish_processing # reads the remainder of the nodes.
 				page.internal_links.each do |link|
-					puts link[:title][page.language.to_sym] + "points to" + link[:uri]
+					puts link[:title][page.language] + "points to" + link[:uri]
 				end
 			end
 		end

@@ -16,7 +16,7 @@ describe 'WikiParser in other languages' do
 
 	it 'should have localized internal links' do
 		@page.internal_links.each do |link|
-			link[:title][@language.to_sym].should_not be_nil
+			link[:title][@language].should_not be_nil
 		end
 	end
 end
