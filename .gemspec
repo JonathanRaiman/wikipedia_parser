@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'wikipedia_parser'
-  s.version     = '1.2.0'
+  s.version     = '1.2.1'
   s.date        = '2013-11-19'
   s.summary     = "Parse Wikipedia dumps, extract links, and page types."
   s.description = "Parse Wikipedia dumps in compressed on uncompressed form, extract links, and page types."

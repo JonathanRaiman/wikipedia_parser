@@ -1,10 +1,12 @@
+#coding: utf-8
 class WikiParser
 
 	# A Wikipedia article page object.
 	class Page
 
 		# The Wikipedia namespaces for all special pages {WikiParser::Page#special_page}, {#page_type}.
-		Namespaces = %w(WP Help Talk User Template Wikipedia File Book Portal TimedText Module MediaWiki Special Media Category)
+		Namespaces = %w(WP Aide Help Talk User Template Wikipedia File Book Portal Portail TimedText Module MediaWiki Special Spécial Media Category Catégorie [^:]+)
+		Disambiguation = ["disambiguation","homonymie", "значения", "disambigua", "peker", "ujednoznacznienie", "olika betydelser", "Begriffsklärung", "desambiguación"]
 		# Title of the Wikipedia article.
 		attr_reader :title
 		# The Wikipedia id of the article.
@@ -48,8 +50,9 @@ class WikiParser
 					@id    = node.content
 				when 'title'
 					@title = node.content
-					if @title.match(/(#{Namespaces.join("|")}):.+/i) then @special_page = true and @page_type = $1 end
-					if @title.match(/.+ \(disambiguation\)/i)      then @disambiguation_page = true end
+
+					if @title.match(/(#{Namespaces.join("|")})|([^|+]):.+/i) then @special_page = true and @page_type = $1 end
+					if @title.match(/.+ \(#{Disambiguation.join("|")}\)/i)      then @disambiguation_page = true end
 				when 'redirect'
 					@redirect = true
 					@redirect_title = node["title"]
